@@ -1,7 +1,9 @@
 {
-  "lock": false,
   "tasks": {
-    "demo": "deno run  --allow-net --allow-read --allow-env=NODE_DEBUG --watch --no-check testdata/my_blog.ts --dev",
-    "test": "deno test --no-check=remote --allow-read"
+    "dev": "deno run --allow-net --allow-read --allow-env --watch main.tsx --dev",
+    "serve": "deno run --allow-net --allow-read --allow-env --no-check main.tsx"
+  },
+  "imports": {
+    "blog": "https://deno.land/x/blog@0.7.0/blog.tsx"
   }
 }
